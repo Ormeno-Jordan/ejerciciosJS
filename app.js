@@ -1,3 +1,5 @@
+//Intro a JavaScript"
+
 //ejercicio 1//
 let miNombre
 miNombre = "Jordan"
@@ -111,7 +113,7 @@ console.log(family[3]);
 console.log(family[4]);
 
 //ejercicio 16//
-let textoAleatorio = (`Mi ${family[1]} cumplió ${oddNumbers[3]} años ésta semana, asi que le regalé ${fruits[4]}, ya que son sus favoritas.`);
+let textoAleatorio = (`Mi ${family[1]} cumplió ${oddNumbers[3]} años ésta semana, asi que le regalé una ${fruits[4]}, ya que es su fruta favorita.`);
 console.log(textoAleatorio);
 
 //ejercicio 17//
@@ -171,3 +173,235 @@ if((ticket == "VIP") || (cashAvailable >= 1000)){
 }else{
     console.log("Usted no puede pasar");
 } 
+
+//Condicionales//
+
+//ejercicio 1//
+let number1 = 10;
+let number2 = 8;
+
+if (number1 > number2){
+    console.log("El primer número es mayor que el segundo");
+}else{
+    console.log("El segundo número es mayor que el primero");
+}
+
+//ejercicio 2//
+let number3 = 1;
+let number4 = 1;
+
+if (number3 == number4){
+    console.log("Los números ingresados son iguales");
+}else{
+    console.log("Los números ingresados son diferentes");
+}
+
+//ejercicio 3//
+let number5 = 8;
+let number6 = 7;
+
+if(number5 > number6){
+    console.log("El primer número es mayor que el segundo");
+}else if(number6 > number5){
+    console.log("El segundo número es mayor que el primero");
+}else{
+    console.log("Los números son idénticos");
+}
+
+//ejercicio 4//
+let number7 = 100;
+let number8 = 100;
+let number9 = 100;
+
+if((number9 > number7) && (number8 > number7)){
+    console.log("El primer número es el más pequeño");
+}else if((number9 > number8) && (number7 > number8)){
+    console.log("El segundo número es el más pequeño");
+}else if((number8 > number9) && (number7 > number9)){
+    console.log("El tercer número es el más pequeño");
+}else{
+    console.log("Los números son idénticos")
+}
+
+//ejercicio 5//
+let personA = {
+    name: "Gonzalo",
+    height: "180",
+    age: "15"
+}
+
+let personB = {
+    name: "Pedro",
+    height: "172",
+    age: "20"
+}
+
+if(personA.age > personB.age){
+    console.log(`${personA.name} es mayor que ${personB.name}`)
+}else{
+    console.log(`${personA.name} es menor que ${personB.name}`)
+}
+
+if(personA.height > personB.height){
+    console.log(`${personA.name} es más alto que ${personB.name}`)
+}else{
+    console.log(`${personA.name} es menos alto que ${personB.name}`)
+}
+
+//ejercicio 6//
+let personC = {
+    name: prompt("Ingrese su nombre"),
+    age: prompt("Ingrese su edad"),
+    height: prompt("Ingrese su altura"),
+    visionSkill: prompt("Ingrese su nivel de visión (0-10)")
+}
+
+if((personC.age >= 18) && (personC.height >= 150) && (personC.visionSkill >= 8)){
+    console.log("Usted está habilitado para conducir");
+}else{
+    console.log("Usted no está habilitado para conducir");
+}
+
+//ejercicio 7//
+let myName = "jordan";
+let personD = prompt ("Ingrese su nombre");
+let ticket1 = prompt ("¿Tiene entrada? (si/no/s/n)");
+let ticketClass = prompt ("Tipo de entrada (vip/normal/no tengo)");
+let buyTicket = "";
+let pay = "";
+
+if((personD == "jordan") || (ticket1 == "si") || (ticket1 == "s") || (ticketClass == "vip") || (ticketClass == "normal")) {
+    console.log("Bienvenido, puede ingresar");
+}else if((myName != "jordan") || (ticket1 == "no") || (ticket1 == "n") || (ticketClass == "no tengo")){
+    buyTicket = prompt("Usted no tiene ticket ¿Desea comprar uno? (si/no)");
+    if(buyTicket == "si"){
+        pay = prompt("Ingrese $1.000 USD");
+        if(pay == "1000"){
+            console.log("Bienvenido/a");
+        }else{
+            console.log("Hasta luego");
+        } 
+    }else{
+        console.log("Hasta luego");
+}}
+else{
+    console.log("Ha ingresado algún valor incorrecto. Vuelva a intentarlo");
+}
+
+//ejercicio 8// INCOMPLETO
+let numeroIncognita = "5";
+var counter = "";
+let numeroIngresado = prompt("Ingrese un número al azar del 1 al 10");
+let numeroIngresado2 = "";
+let numeroIngresado3 = "";
+
+if((numeroIngresado != numeroIncognita) && (counter < 3)){
+    counter = 2;
+    numeroIngresado2 = prompt("Ingrese nuevamente un número");
+}else if((numeroIngresado2 != numeroIncognita) && (counter < 3)){
+    counter = 3;
+    numeroIngresado3 = prompt("Ingrese nuevamente un número");
+}else if((numeroIngresado3 != numeroIncognita) && (counter < 3)){
+    console.log("Lo sentimos. No ha adivinado el número");
+}else{
+    console.log("Felicidades. Ha adivinado el número");
+}
+
+//ejercicio 9// INCOMPLETO
+let edad = prompt("Ingrese su edad");
+
+if((edad > 0) && (edad <= 12)){
+    console.log("Eres un infante")
+}else if((edad > 12) && (edad <= 18)){
+    console.log("Eres un adolescente");
+}else if((edad > 18) && (edad <= 45)){
+    console.log("Eres un joven mayor");
+}else if((edad > 45) && (edad <= 100)){
+    console.log("Eres un anciado");
+}else{
+    console.log("¿Es realmente ésa tu edad?");
+}
+
+//ejercicio 10// INCOMPLETO
+let playerOne = prompt("(jugador 1) ingrese su nombre");
+let playerTwo = prompt("(jugador 2) ingrese su nombre");
+let opt1 = "PIEDRA";
+let opt2 = "PAPEL";
+let opt3 = "TIJERAS";
+let optPlayerOne = prompt(`${playerOne} ingrese una Opción: (PIEDRA/PAPEL/TIJERAS)`);
+let optPlayerTwo = prompt(`${playerTwo} ingrese una Opción: (PIEDRA/PAPEL/TIJERAS)`);
+
+if((optPlayerOne == "PIEDRA") && (optPlayerTwo == "TIJERAS") || (optPlayerOne == "TIJERAS") && (optPlayerTwo == "PAPEL")){
+    console.log(`Felicidades, ${playerOne} ha ganado`);
+}else if((optPlayerTwo == "PIEDRA") && (optPlayerOne == "TIJERAS") || (optPlayerTwo == "TIJERAS") && (optPlayerOne == "PAPEL")){
+    console.log(`Felicidades, ${playerTwo} ha ganado`);
+}else if((optPlayerOne != "PIEDRA") && (optPlayerOne != "PAPEL") && (optPlayerOne != "TIJERAS")){
+    console.log(`${playerOne} está haciendo trampas`);
+}else if((optPlayerTwo != "PIEDRA") && (optPlayerTwo != "PAPEL") && (optPlayerTwo != "TIJERAS")){
+    console.log(`${playerOne} está haciendo trampas`);
+}else{
+    console.log("Ha sido empate");
+}
+
+//ejercicio 11//
+let color = prompt("Ingrese un color(primera letra en Mayúscula)");
+
+switch(color){
+    case "Blanco": console.log("Falta de color");
+    break;
+    case "Negro": console.log("Falta de color");
+    break;
+    case "Verde": console.log("El color de la naturaleza");
+    break;
+    case "Azul": console.log("El color del agua");
+    break;
+    case "Amarillo": console.log("El color del sol");
+    break;
+    case "Rojo": console.log("El color del fuego");
+    break;
+    case "Marrón": console.log("El color de la tierra");
+    break;
+    default: console.log("Excelente elección. No lo teníamos pensado");
+    break;
+}
+
+//ejercicio 12//
+let chooseOperation = prompt("¿Qué operación desea realizar? (SUMA/RESTA/MULTIPLICACIÓN/DIVISIÓN)");
+let firstValue = Number(prompt("Ingrese el primer número de la operación"));
+let secondValue = Number(prompt("Ingrese el segundo número de la operación"));
+let result = "";
+
+if(chooseOperation == "SUMA"){
+    result = firstValue + secondValue;
+    console.log(`El resultado de la operación es: ${result}`);
+}else if(chooseOperation == "RESTA"){
+    result = firstValue - secondValue;
+    console.log(`El resultado de la operación es: ${result}`);
+}else if(chooseOperation == "MULTIPLICACIÓN"){
+    result = firstValue * secondValue;
+    console.log(`El resultado de la operación es: ${result}`);
+}else if((chooseOperation == "DIVISIÓN") && (secondValue !=0)){
+    result = firstValue / secondValue;
+    console.log(`El resultado de la operación es: ${result}`);
+}else{
+    console.log("ERROR");
+}
+
+//ejercicio 13//
+let completeName = prompt("Ingrese su nombre completo");
+let dateBirth = prompt("Ingrese su fecha de nacimiento (../../..)");
+let dniNumber = prompt("Ingrese su n° de documento");
+let confirmation = prompt(`Confirma (S/N) que tus datos están correctos; nombre completo: ${completeName} / fecha de nacimiento: ${dateBirth} / n° de documento: ${dniNumber}`);
+
+if((confirmation == "s") || (confirmation == "S") || (confirmation == "si") || (confirmation == "SI")){
+    let citizen = {
+        givenName: completeName,
+        givenBirth: dateBirth,
+        givenDniNumber: dniNumber
+    }
+    console.table(citizen);
+    console.log("Felicidades, se ha registrado con éxito")
+}else{
+    console.log("vuelva a intentarlo en 1 mes");
+}
+
